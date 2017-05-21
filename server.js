@@ -37,9 +37,7 @@ app.get('/', function (req, res) {
 
 app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType) {
   request(apiUrl + 'detail/' + apiKey + '/koop/' + req.params.GroupByObjectType, function (error, response, body) {
-    console.log(GroupByObjectType);
     var data = JSON.parse(body)
-    console.log(data)
     res.render('detail.ejs', {residence: data})
   });
 })
