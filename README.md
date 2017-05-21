@@ -9,8 +9,8 @@ Deze repository bevat de eindopdracht voor het vak *Performance matters*, onderd
 
 ### Clone deze repo
 ```
-git clone https://github.com/nooroel-imamdi/performance-matters-her
-cd performance-matters-her
+git clone https://github.com/nooroel-imamdi/performance-matters-herkansing
+cd performance-matters-herkansing
 ```
 
 ### node_modules
@@ -60,13 +60,6 @@ Zoals eerder aangekondigd zit de API-key verborgen in het `env`-bestand. Om de a
 
 ## Optimalisatie
 
-
-## Lighthouse
-
-
-
-
-# Funda app Server Side - Service Worker
 
 ## Lighthouse
 Lighthouse is een open-source, geautomatiseerde tool voor het verbeteren van de prestaties, kwaliteit en juistheid van een web-apps. Deze tool loopt de gehele app door en komt vervolgens met een rapport vol concrete bevindingen die nagelopen kunnen worden om de app te verbeteren.
