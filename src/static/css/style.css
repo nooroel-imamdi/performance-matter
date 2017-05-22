@@ -15,6 +15,10 @@ h5,
 h6{
 	font-family: 'Amiko', sans-serif;
 }
+h1{
+	width: 100%;
+	text-align: center;
+}
 p, ul{
 	font-family: 'Amiko', sans-serif;
 }
@@ -197,6 +201,10 @@ section#overview{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-content: center;
+}
+section#offline{
+	width: 50%;
+	margin: 5em auto 1em;
 }
 section#overview article{
 	position: relative;

@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var ngrok = require('ngrok');
 var browserify = require('browserify');
+var compression = require('compression')
 // var httpsRedirect = require('express-https-redirect');
 
 require('dotenv').config()
@@ -28,12 +29,19 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Set Static Path
 app.use(express.static(path.join(__dirname, './src')));
 
+// Gzip compression added
+app.use(compression());
+
 app.get('/', function (req, res) {
   request(apiUrl + apiKey + searchKey, function (error, response, body) {
     var data = JSON.parse(body)
     res.render('index.ejs', {residences: data})
   });
 })
+
+app.use('/offline', function(req, res, next) {
+  res.render('offline.ejs');
+});
 
 app.get('/residences/:GroupByObjectType', function (req, res, GroupByObjectType) {
   request(apiUrl + 'detail/' + apiKey + '/koop/' + req.params.GroupByObjectType, function (error, response, body) {

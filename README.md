@@ -52,14 +52,16 @@ Browserify
 npm run build
 ```
 
-## Rijksmuseum API
-De Rijksmuseum API Collectie is een set van ruim 111.000 objectenbeschrijvingen (metadata) en digitale beelden uit de collectie van het Rijksmuseum. De kunstwerken en gebruiksvoorwerpen in de set dateren van de oudheid tot de late negentiende eeuw en geven een goed beeld van de rijkheid, diversiteit en schoonheid van ons Nederlands (en internationaal) erfgoed. Helaas kunnen wij, in verband met auteursrechtelijke beperkingen, nog geen werken uit de twintigste en eenentwintigste Eeuw beschikbaar stellen.
+## FUNDA API
+Funda is sinds 2001 hét vastgoedplatform van makelaars voor consumenten en ondernemers. In ruim 15 jaar tijd groeide funda uit van een kleine website tot gemeengoed. Funda loopt voorop met de nieuwste toepassingen van internet bij het zoeken naar en vinden van vastgoed.
+
+Als studenten van de Minor Webdevelopment aan de Hogeschool van Amsterdam hebben wij de mogelijkheid gekregen om toegang te krijgen tot deze data d.m.v. een API. We hebben hierbij diverse mogelijkheden om data binnen te halen en te verwerken in een interface voor de gebruikers.
 
 ### API-key
 Zoals eerder aangekondigd zit de API-key verborgen in het `env`-bestand. Om de app te kunnen draaien is het noodzakelijk om in het bezit te zijn van dit bestand. Bekijk [hier](https://github.com/nooroel-imamdi/performance-matters-her#env-file) hoe je die kunt bemachtigen.
 
 ## Optimalisatie
-
+Voor optimalisatie van de Funda App is er gebruik gemaakt van `compression`. Deze tracht response bodies te comprimeren voor alle requests.
 
 ## Lighthouse
 Lighthouse is een open-source, geautomatiseerde tool voor het verbeteren van de prestaties, kwaliteit en juistheid van een web-apps. Deze tool loopt de gehele app door en komt vervolgens met een rapport vol concrete bevindingen die nagelopen kunnen worden om de app te verbeteren.
