@@ -39,7 +39,7 @@ app.get('/', function (req, res) {
   });
 })
 
-app.use('/offline', function(req, res, next) {
+app.get('/offline', function(req, res, next) {
   res.render('offline.ejs');
 });
 
