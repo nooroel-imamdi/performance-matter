@@ -96,82 +96,9 @@ self.addEventListener('fetch', function(event) {
 					.catch(function (err) {
 	            return cache.match('/offline/');
 	        });
-					// event.respondWith(fetch(request).
-					// catch(function (err) {
-	        //     return fetchCoreFile(request.url);
-	        // }).catch(function (err) {
-	        //     return fetchCoreFile('/offline/');
-	        // }));
 
 
 			}) // end caches.match(e.request)
 	); // end e.respondWith
 
 });
-
-
-
-//
-
-// 'use strict';
-//
-// var cacheCore = 'rm-v1-core',
-//     cachePages = 'rm-v1-pages',
-//     cacheImage = 'rm-v1-images';
-//
-// self.addEventListener('install', function (event) {
-//     return event.waitUntil(caches.open(cacheCore).then(function (cache) {
-//         return cache.addAll(['/offline/', 'static/css/style.css', './']);
-//     }).then(self.skipWaiting()));
-// });
-//
-// self.addEventListener('fetch', function (event) {
-//     var request = event.request;
-//     if (request.mode === 'navigate') {
-//         event.respondWith(fetch(request).then(function (response) {
-//             return cachePage(request, response);
-//         }).catch(function (err) {
-//             return getCachedPage(request);
-//         }).catch(function (err) {
-//             return fetchCoreFile('/offline/');
-//         }));
-//     } else {
-//         event.respondWith(fetch(request).catch(function (err) {
-//             return fetchCoreFile(request.url);
-//         }).catch(function (err) {
-//             return fetchCoreFile('/offline/');
-//         }));
-//     }
-// });
-//
-// function fetchCoreFile(url) {
-//     return caches.open(cacheCore).then(function (cache) {
-//         return cache.match(url);
-//     }).then(function (response) {
-//         return response ? response : Promise.reject();
-//     });
-// }
-//
-// function fetchImageFile(url) {
-//     return caches.open(cacheImage).then(function (cache) {
-//         return cache.match(url);
-//     }).then(function (response) {
-//         return response ? response : Promise.reject();
-//     });
-// }
-//
-// function getCachedPage(request) {
-//     return caches.open(cachePages).then(function (cache) {
-//         return cache.match(request);
-//     }).then(function (response) {
-//         return response ? response : Promise.reject();
-//     });
-// }
-//
-// function cachePage(request, response) {
-//     var clonedResponse = response.clone();
-//     caches.open(cachePages).then(function (cache) {
-//         return cache.put(request, clonedResponse);
-//     });
-//     return response;
-// }
